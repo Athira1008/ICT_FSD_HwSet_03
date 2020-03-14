@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        h3{
+           color:darkslateblue;
+        }
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login & Registration</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-success navbar-dark">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="login.html">Students</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="book.html">Library</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="product.html">Product</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="container">
+          <div class="row">
+              <div class="col col-12 col-sm-6">
+                  <h3>Login</h3>
+                  <form>
+                      <table class="table table-borderless">
+                          <tr>
+                              <td>Username</td>
+                              <td><input type="text" class="form-control" id="uid"></td>
+                          </tr>
+                          <tr>
+                              <td>Password</td>
+                              <td><input type="password" class="form-control" id="pid"></td>
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td><button type="button" class="btn btn-info" onclick="studentLogin();">LOGIN</button></td>
+                        </tr>
+                      </table>
+                  </form>
+              </div>
+              <div class="col col-12 col-sm-6">
+                  <h3>Register here...</h3>
+                  <form id="fid">
+                      <table class="table table-borderless">
+                          <tr>
+                              <td>Name</td>
+                              <td><input type="text" id="nid" class="form-control"></td>
+                          </tr>
+                          <tr>
+                              <td>Age</td>
+                              <td><input type="text" id="agid" class="form-control"></td>
+                          </tr>
+                          <tr>
+                              <td>D.O.B</td>
+                              <td><input type="date" id="dobid" class="form-control"></td>
+                          </tr>
+                          <tr>
+                              <td>Email</td>
+                              <td><input type="email" id="mailid" class="form-control"></td>
+                          </tr>
+                          <tr>
+                              <td>Place</td>
+                              <td><input type="text" id="plcid" class="form-control"></td>
+                          </tr>
+                          <tr>
+                              <td>District</td>
+                              <td>
+                                  <select id="distid" class="form-control">
+                                      <option value=""></option>
+                                      <option value="Kasargod">Kasargod</option>   
+                                      <option value="Kannur">Kannur</option>      
+                                      <option value="Wayanad">Wayanad</option>
+                                      <option value="Kozhikode">Kozhikode</option>
+                                      <option value="Malappuram">Malappuram</option>
+                                      <option value="Palakkad">Palakkad</option> 
+                                      <option value="Thrissur">Thrissur</option>
+                                      <option value="Ernakulam">Ernakulam</option>
+                                      <option value="Idukki">Idukki</option>
+                                      <option value="Kottayam">Kottayam</option>
+                                      <option value="Pathanamthitta">Pathanamthitta</option> 
+                                      <option value="Alappuzha">Alappuzha</option>
+                                      <option value="Kollam">Kollam</option>
+                                      <option value="Thiruvananthapuram">Thiruvananthapuram</option>                                         
+                                  </select>
+                                </td>
+                          </tr>
+                          <tr>
+                              <td>Username</td>
+                              <td><input type="text" id="unamid" class="form-control"></td>
+                          </tr>
+                          <tr>
+                              <td>Password</td>
+                              <td><input type="password" id="pswdid" class="form-control"></td>
+                          </tr>
+                          <tr>
+                              <td>Confirm Password</td>
+                              <td><input type="password" id="cpaasid" class="form-control"></td>
+                          </tr>
+                          <tr>
+                              <td><button type="button" class="btn btn-info" onclick="resetRegistration();">RESET</button></td>
+                              <td><button type="button" class="btn btn-info" onclick="readRegistration();">SUBMIT</button></td>
+                          </tr>
+                      </table>                    
+                  </form>
+              </div>
+          </div>
+      </div>
+      <script>
+          function studentLogin(){
+              var uname=document.getElementById("uid").value;
+              var pass=document.getElementById("pid").value;
+              console.log("Username : "+uname);
+              console.log("Password :"+pass);
+          }
+          function readRegistration(){
+              var nam=document.getElementById("nid").value;
+              var age=document.getElementById("agid").value;
+              var dob=document.getElementById("dobid").value;
+              var email=document.getElementById("mailid").value;
+              var place=document.getElementById("plcid").value;
+              var dist=document.getElementById("distid").value;
+              var unam=document.getElementById("unamid").value;
+              var pswd=document.getElementById("pswdid").value;
+              var cpswd=document.getElementById("cpaasid").value;
+
+              console.log("Name : "+nam);
+              console.log("Age : "+age);
+              console.log("D.O.B : "+dob);
+              console.log("E-mail : "+email);
+              console.log("Place : "+place);
+              console.log("District : "+dist);
+              console.log("Username : "+unam);
+              console.log("Password : "+pswd);
+              console.log("Confirm Password : "+cpswd);
+          }
+          function resetRegistration(){
+              document.getElementById("fid").reset();
+          }
+      </script>
+</body>
+</html>
