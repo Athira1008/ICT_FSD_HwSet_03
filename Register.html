@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Registration</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+      <div class="container">
+          <div class="row">
+              <div class="col col-sm-3"></div>
+              <div class="col col-12 col-sm-6">
+                  <form>
+                      <table class="table table-borderless">
+                          <tr>
+                              <td>Name</td>
+                              <td><input type="text" id="nid" class="form-control"></td>
+                          </tr>
+                          <tr>
+                              <td>Address</td>
+                              <td><textarea id="adrid" cols="30" rows="5" class="form-control"></textarea></td>
+                          </tr>
+                          <tr>
+                            <td>Email</td>
+                            <td><input type="email" id="mailid" class="form-control"></td>
+                         </tr>
+                          <tr>
+                              <td>D.O.B</td>
+                              <td><input type="date" id="dobid" class="form-control"></td>
+                          </tr>
+                          <tr>
+                              <td>Place</td>
+                              <td><input type="text" id="plcid" class="form-control"></td>
+                          </tr>
+                          <tr>
+                              <td>Username</td>
+                              <td><input type="text" id="unamid" class="form-control"></td>
+                          </tr>
+                          <tr>
+                              <td>Password</td>
+                              <td><input type="password" id="pswdid" class="form-control"></td>
+                          </tr>
+                          <tr>
+                              <td>Confirm Password</td>
+                              <td><input type="password" id="cpaasid" class="form-control"></td>
+                          </tr>
+                          <tr>
+                              <td></td>
+                              <td><button type="button" class="btn btn-info" onclick="validPassword();">REGISTER</button></td>
+                          </tr>
+                      </table>                    
+                  </form>
+              </div>
+              <div class="col col-sm-3"></div>
+          </div>
+      </div>
+      <script>
+          function validPassword(){
+              var nam=document.getElementById("nid").value;
+              var adrs=document.getElementById("adrid").value;
+              var email=document.getElementById("mailid").value;
+              var dob=document.getElementById("dobid").value;   
+              var unam=document.getElementById("unamid").value;
+              var pswd=document.getElementById("pswdid").value;
+              var cpswd=document.getElementById("cpaasid").value;
+              if(pswd!=cpswd){
+                console.log("Password not matching");
+              }
+          }
+      </script>
+</body>
+</html>
